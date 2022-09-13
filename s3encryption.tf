@@ -9,15 +9,15 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "demo_ecryption" {
 
   rule {
     apply_server_side_encryption_by_default {
-        # If using SSE-KMS with your KMS key
-    #   kms_master_key_id = aws_kms_key.mykey.arn
-    #   sse_algorithm     = "aws:kms"
+      # If using SSE-KMS with your KMS key
+      #   kms_master_key_id = aws_kms_key.mykey.arn
+      #   sse_algorithm     = "aws:kms"
 
-    #If using SSE-KMS with AWS manages key (aws/s3)
-    sse_algorithm     = "aws:kms"
+      #If using SSE-KMS with AWS manages key (aws/s3)
+      sse_algorithm = "aws:kms"
 
-    # If using SSE-S3
-    #sse_algorithm     = "AES256"
+      # If using SSE-S3
+      #sse_algorithm     = "AES256"
     }
   }
 }
