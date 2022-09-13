@@ -14,10 +14,10 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "demo_ecryption" {
       #   sse_algorithm     = "aws:kms"
 
       #If using SSE-KMS with AWS manages key (aws/s3)
-      sse_algorithm = "aws:kms"
+      #sse_algorithm = "aws:kms"
 
       # If using SSE-S3
-      #sse_algorithm     = "AES256"
+      sse_algorithm     = "AES256"
     }
   }
 }
